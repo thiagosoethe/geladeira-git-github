@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática 1 HTML e CSS</title>
+   
+    <link rel="stylesheet" type="text/css" href="css/site.css">
+
+</head>
+<body>
+    <header>
+    <img src="imgs/logo.png" alt="Logo da página" title="Logo da página">
+        <h1> Geladeiras & Outros - FALE CONOSCO</h1>
+
+
+
+        
+    </header>
+    <!--A tag "nav"cria uma área para navegação como menus e outros-->
+    <nav>
+        <!--A tag "a" cria um hiperlink para outra arquivo (local) outro site(externo) ou algum local da própria página(interno) a tag "div" define uma divisão ou seção em uma página HTML, o elemento "div" é frequentemente utilizado como container para outros elementos-->
+        <a href="index.html"><div class="opcao">Inicio</div></a>
+        <a href="produtos.html"><div class="opcao">Geladeiras e Freezers</div></a>
+        <a href="faleconosco.html"><div class="opcao">Fale conosco</div></a>
+
+        
+    </nav>
+    <!--A tag "section" define uma seção dos conteúdos de uma página-->
+    <section>
+             <h2>Fale conosco!</h2>
+             <p>Ficou com alguma Dúvida? Preencha este formulario e entraremos em contato</p>
+             <form name="Frnfaleconosco" method="get" action="#"></form>
+                <fieldset class = "faleConosco">
+                    <legend>Dados pessoais:</legend>
+                    <label for = "nome" >Nome:</label>
+                    <input type ="text" name="txtnome" id="nome">
+                    <label for="fone">Telefone:</label>
+                    <input type="text" name="txtfone"  id="fone">
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="txtemail" id="email"></input>
+                </fieldset>
+        
+                <fieldset class = "faleConosco">
+                    <legend>Motivo do contato:</legend>
+                    <label for="motivo">Motivo:</label>
+                    <select name="selmotivo" id="motivo">
+                        <option value="">Escolha</option>
+                        <option value="RE">Reclamação</option>
+                        <option value="SU">Sugestão</option>
+                        <option value="PR">Informação sobre produto</option>
+                    </select> 
+                    <label for="comentario">Comentario:</label>
+                    <textarea name="txacomentario" id="comentario"></textarea>
+                    <button type="reset">Limpar</button><button type="submit">Enviar</button>
+                    
+                </fieldset>
+            </form>
+    </section>
+    <!--A tag "footer" define a criação de um rodapé-->
+    <footer>Copyright &copy; ADS2025</footer>
+</body>
+</html>
