@@ -30,7 +30,7 @@
     <section>
              <h2>Fale conosco!</h2>
              <p>Ficou com alguma Dúvida? Preencha este formulario e entraremos em contato</p>
-             <form name="Frnfaleconosco" method="get" action="#"></form>
+             <form name="Frnfaleconosco" method="post" action="#" onsubmit="return validafrm()">
                 <fieldset class = "faleConosco">
                     <legend>Dados pessoais:</legend>
                     <label for = "nome" >Nome:</label>
@@ -40,6 +40,7 @@
                     <label for="email">E-mail:</label>
                     <input type="email" name="txtemail" id="email"></input>
                 </fieldset>
+
         
                 <fieldset class = "faleConosco">
                     <legend>Motivo do contato:</legend>
@@ -59,5 +60,35 @@
     </section>
     <!--A tag "footer" define a criação de um rodapé-->
     <footer>Copyright &copy; ADS2025</footer>
+    <script>
+        function validafrm(){
+            
+
+            let nome =  document.Frnfaleconosco.txtnome.value;
+            let expRegNome =new RegExp ("^[A-zÀ-ü]{3,}( [A-zÀ-ü]{2,})+$");
+
+            if(!expRegNome.test(nome)){
+                alert("Preencha o nome corretamente");
+                document.Frnfaleconosco.txtnome.focus();
+                return false;
+            }
+            let fone = document.Frnfaleconosco.txtfone.value;
+            let expRegFone = new RegExp ("^\\(?\\d{2}\\)? ?9?\\d{4}-?\\d{4}$");
+            if(!expRegFone.test(fone)){
+                alert("Preencha o telefone corretamente");
+                document.Frnfaleconosco.txtfone.focus();
+                return false;
+            }
+            let email = document.Frnfaleconosco.txtemail.value;
+            let expRegEmail = new RegExp ("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
+            if(!expRegEmail.test(email)){
+                alert("Preencha o email corretamente");
+                document.Frnfaleconosco.txtemail.focus();
+                return false;
+            }
+            
+        
+        }
+    </script>
 </body>
 </html>
